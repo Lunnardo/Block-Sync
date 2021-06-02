@@ -1,13 +1,14 @@
-/**
- * Kelas SavingsAccount ini menangani bagian error handling untuk deposit dan withdraw dan
- * juga menampilkan balance atau saldo
- *
+/** Kelas SavingsAccount mengatur logika menyimpan dan pengeluaran uang
+ * saldo yang diambil adalah saldo kostumer
+ * termasuk dengan error handling terhadap input yang tidak valid
  */
+
 class SavingsAccount {
-    private double balance;
-    /**
-     * inisialisasi kelas
+
+    /** deklarasi variable pada kelas SavingsAccount
      */
+    private double balance;
+
     public SavingsAccount(double bal) {
         balance = bal;
     }
@@ -15,18 +16,16 @@ class SavingsAccount {
     public SavingsAccount() {
         this(0);
     }
-    /**
-     * method getBalance berfungsi untuk mendapatkan nilai balance atau saldo milik konsumen
+
+    /** konstruktor untuk mendapatkan data balance
      */
+
     public double getBalance() {
         return balance;
     }
 
-    /**
-     * method withdraw berfungsi untuk menangani error handling berupa
-     * jika nilai penarikan bernilai dibawah 0 maka,
-     * akan muncul pesan error yang memberitahu bahwa nilai withdraw negatif.
-     * dan menampilkan nilai balance atau saldo setiap kali terjadi penarikan uang atau withdraw
+    /** Melakukan fungsi withdraw atau pengambilan uang dari balance kustomer
+     * exception berlaku untuk input yang tidak valid yaitu jumlah negatif
      */
     public void withdraw(float anAmount) {
         if (anAmount < 0.0)
@@ -40,10 +39,8 @@ class SavingsAccount {
     }
 
     /**
-     * method deposit berfungsi untuk menangani error handling berupa ketika  dilakukan deposit atau penyimpanan uang
-     * dan ternyata nilai yang dimasukkan untuk penyimpanan uang atau deposit bernilai dibawah 0 maka,
-     * akan muncul error yang memberitahu bahwa nilai deposit negatif.
-     * dan menampilkan nilai balance atau saldo setiap kali terjadi penyimpanana uang atau deposit
+     * Fungsi deposit berfungsi untuk melakukan penyimpanan uang ke balance kustomer
+     * exception berlaku untuk input yang tidak valid yaitu jumlah negatif
      */
     public void deposit(float anAmount) {
 
