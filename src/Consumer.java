@@ -1,5 +1,5 @@
 /**
- * Kelas consumer ini menangani bagian untuk mengambil uang
+ * Kelas consumer ini menangani bagian untuk penarikan uang
  * pada saldo akun tabungan milik konsumen
  */
 class Consumer extends Thread {
@@ -9,7 +9,7 @@ class Consumer extends Thread {
     private SavingsAccount account;
     public Consumer(SavingsAccount acct) { account = acct; }
     /**
-     * method run  berfungsi untuk menjalankan loop yang akan melakukan pengambilan uang atau withdraw uang dari saldo
+     * method run  berfungsi untuk menjalankan loop yang akan melakukan penarikan uang atau withdraw uang dari saldo
      * tabungan milik konsumen
      */
     public void run() {

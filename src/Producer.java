@@ -1,5 +1,5 @@
 /**
- * Kelas producer ini menangani bagian untuk mengirimkan uang
+ * Kelas producer ini menangani bagian untuk penyimpanan uang
  * pada saldo akun tabungan milik konsumen
  */
 class Producer extends Thread {
@@ -9,7 +9,7 @@ class Producer extends Thread {
     private SavingsAccount account;
     public Producer(SavingsAccount acct) { account = acct; }
     /**
-     * method run  berfungsi untuk menjalankan loop yang akan melakukan pengiriman uang atau deposit uang ke saldo
+     * method run  berfungsi untuk menjalankan loop yang akan melakukan penyimpanan uang atau deposit uang ke saldo
      * tabungan milik konsumen
      */
     public void run() {
